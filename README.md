@@ -10,8 +10,7 @@ Group Number: 4
 - Blade
 - Uriel
 - Stephen
-- Alex Submission here
-    [cs250Group4Assignment3.pdf](cs250Group4Assignment3.pdf)
+- Alex 
 ## Selected Software System 
 
 [MLDS-1.pdf](https://github.com/user-attachments/files/32837433/MLDS-1.pdf)
