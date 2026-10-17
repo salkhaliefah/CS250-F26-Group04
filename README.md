@@ -10,10 +10,11 @@ Group Number: 4
 - Blade
 - Uriel
 - Stephen
-
+- Alex 
 ## Selected Software System 
 
 [MLDS-1.pdf](https://github.com/user-attachments/files/32837433/MLDS-1.pdf)
+
 
 
 ## Team Discord
