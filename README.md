@@ -39,3 +39,73 @@ Uriel: I really hope our group can work together and help each other out.
 - Disagreements will be resolved via vote.
 - We can meet virtually using teams or in campus library.
 - Team lead will decide who sends final submission.
+
+
+
+**
+Alarm Tests portion
+
+Mountain Lion alarm Tests
+
+**Alex**
+
+Group 4 assignment alarm and mountain lion detection: 
+
+Alarm detection tests:
+
+[sound classifier](ca://s?q=Explain_sound_classifier_logic)
+[noise strength evaluator](ca://s?q=Describe_noise_strength_evaluator)
+
+Boolean value
+Test sounds
+
+MOUNTAIN_LION
+
+NOT_MOUNTAIN_LION
+
+NOISE
+
+If (sound is weak)
+
+return  
+
+
+Wind_detection
+
+Mountain_LionSamplesInWindSpeed = {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50}(Mountain lion samples at different wind speeds in kilometers per hour) Sample data
+Mountain lion sounds at different angles
+degreeAngleSearch = Mountain_LionSamplesInWindSpeed();
+compare wind and sound data with samples
+Direction_windAngles = {}( sound with direction and wind speed)
+
+direction_wind = degreeAngle
+Wind_speed = KPH(kilometers per hour)
+
+soundDetection() 
+Return soundDetection
+
+Here's my final version
+
+Booleon value
+Test sounds:
+MOUNTAIN_LION
+NOT_MOUNTAIN_LION
+NOISE
+
+If (sound is weak)
+Return NOISE
+
+Test wind speed inputs
+
+Wind_speed = KPH (kilometers per hour)
+Mountain_LionSamplesInWindSpeed = {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50}
+degreeAngleSearch = Mountain_LionSamplesInWindSpeed();
+direction_windAngles = {} (sound with direction and wind speed)
+direction_wind = degreeAngle
+soundDetection()
+
+If degreeAngle = Direction_windAngles(sample data Range)
+    return isMountainLion
+else
+    return isNotMountainLion
+**
