@@ -475,6 +475,19 @@ TEST automaticAlertLifecycle
 END TEST
 ```
 
+## Data Management Strategy
+
+For this system, I would use one centralized SQL database to store information about the park’s sensors, alerts, ranger reviews, reports, and archived records. The database could include tables for parks, sensors, alerts, rangers, classifications, detailed alert records, summary records, and reports. Each alert would be connected to the sensor that detected it and the ranger who reviewed it. The database would also record whether the alert was valid, what classification it received, and whether it was kept, summarized, or archived. This would allow users to search reports by date, alert classification, sensor location, map area, or ranger.
+
+I chose to use one database because this system does not seem large enough to require multiple separate databases. Keeping everything together would make it easier to connect related information and avoid duplicate or conflicting records. SQL would also allow the system to use primary keys and foreign keys to make sure that alerts are connected to valid sensors and that classifications are connected to the correct rangers. 
+
+Because the system stores the locations and patterns of possible mountain lion activity, access should be limited to authorized rangers and employees. Rangers could review and classify alerts, while administrators could manage sensor information and create reports. The system should use regular backups, audit logs, and a policy for deciding how long records should be kept. Older alerts could be moved into archive tables after they are converted into summary records instead of being deleted completely.
+
+One alternative would be to use Redis, which is a fast key-value database. For example, a new alert could be stored using a key like alert:123, along with information such as the sound type, strength, location, date, and classification. Redis could help the ranger station access new alerts quickly, but it would not organize the connections between sensors, alerts, rangers, and reports as well as SQL. It could also require extra settings to make sure older alert information is not lost. Another option would be to use two SQL databases, with one for current alerts and another for historical or archived records. This could improve performance, but it would also make the system more complicated to maintain and secure. Another organization option would be to place all alert information in one large table instead of separating it into tables for alerts, sensors, classifications, summaries, and reports. This would be simpler at first, but it could create duplicate information and make the database harder to update accurately.
+
+Using spreadsheets or separate files would probably be less effective because records could be duplicated, lost, or entered inconsistently. Redis could help the ranger station access new alerts quickly, but it would not be as useful for storing and organizing long-term records or creating detailed reports. A cloud-based SQL database could provide automatic backups and additional security, but it might cost more and require the parks department to depend on an outside service. Overall, one centralized SQL database is the best choice because it keeps the system organized, supports accurate reporting, and is practical for the size and purpose of this system.
+
+
 ## Development of Plan and Timeline
 
 We will divide the project into two parts, frontend and backend development. And split the work evenly depending on experience. We will separate the work into roles, but that doesn’t mean developers are stuck in only one role, it just means someone is responsible for tracking progress end to end.
