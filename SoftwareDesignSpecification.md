@@ -487,6 +487,11 @@ One alternative would be to use Redis, which is a fast key-value database. For e
 
 Using spreadsheets or separate files would probably be less effective because records could be duplicated, lost, or entered inconsistently. Redis could help the ranger station access new alerts quickly, but it would not be as useful for storing and organizing long-term records or creating detailed reports. A cloud-based SQL database could provide automatic backups and additional security, but it might cost more and require the parks department to depend on an outside service. Overall, one centralized SQL database is the best choice because it keeps the system organized, supports accurate reporting, and is practical for the size and purpose of this system.
 
+SQL Diagram
+
+<img width="900" height="785" alt="image" src="https://github.com/user-attachments/assets/33c7e458-f6b4-40dc-93af-0f3ce54c97da" />
+
+
 
 ## Development of Plan and Timeline
 
